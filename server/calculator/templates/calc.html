@@ -10,4 +10,9 @@
 
   <input type="submit" value="Spočítaj">
 </form>
+
+{% if result %}
+  <h3>vysledok: {{ result }}</h3>
+{% endif %}
+
 {% endblock %}
