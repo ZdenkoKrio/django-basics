@@ -27,3 +27,13 @@ def about(request):
 def random_view(request):
     number = randint(0,100)
     return render(request, "random_page.html", {"number":number})
+
+
+def random_view2(request, start, end):
+    number = randint(start,end)
+    return render(request, "random_page.html", {"number":number})
+
+
+def random_view3(request, start, end, turns):
+    numbers = [randint(start,end) for _ in range(turns)]
+    return render(request, "random_page2.html", {"numbers":numbers})
