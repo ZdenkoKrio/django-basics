@@ -2,7 +2,8 @@ from tkinter.font import names
 
 from django.urls import path
 from .views import (home, home2, home_d, home2_d,
-                    about, random_view, random_view2, random_view3)
+                    about, random_view, random_view2, random_view3,
+                    new_test_redirect)
 
 
 urlpatterns = [
@@ -14,4 +15,5 @@ urlpatterns = [
     path('random_view/<int:start>/<int:end>', random_view2, name="r2"),
     path('random_view/', random_view, name="r1"),
     path('random_view/<int:start>/<int:end>/<int:turns>', random_view3, name="r3"),
+    path('red_test/', new_test_redirect, name="new_test"),
 ]
