@@ -18,3 +18,6 @@ class Band(models.Model):
     genre = models.IntegerField(choices = GENRE, default=-1)
     unknown = models.CharField(max_length=10, default="test")
 
+
+    def __str__(self):
+        return f"{self.name} - {self.GENRE[self.genre][1]}"
