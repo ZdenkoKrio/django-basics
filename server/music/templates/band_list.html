@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<h1>Band list page</h1>
+
+<ul>
+  {% for band in bands %}
+  <li>{{ band.name }}</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from .models import Band
 
-# Create your views here.
+
+def band_list_view(request):
+    result = Band.objects.all().values()
+
+    return render(request, "band_list.html", {"bands": result})
