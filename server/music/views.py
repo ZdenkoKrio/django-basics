@@ -38,3 +38,9 @@ def album_detail_view(request, id):
     return render(request, "album_detail.html",
                   {"album": result,
                    "songs": songs})
+
+
+def song_detail_view(request, id):
+    result = Song.objects.get(id=id)
+    return render(request, "song_detail.html",
+                  {"song": result})

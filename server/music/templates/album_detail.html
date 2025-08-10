@@ -11,7 +11,7 @@
 <h3>Band: {{ album.band.name }}</h3>
 
 {% for s in songs %}
-    <h3><a href=""> {{ s.title }}</a></h3>
+    <h3><a href="{% url 's_detail' s.id %}"> {{ s.title }}</a></h3>
 {% endfor %}
 
 {% endblock %}

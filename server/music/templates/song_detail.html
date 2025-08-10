@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<h1>Album - {{ song.album.title}}: {{ song.title }}</h1>
+
+<h3>Year: {{ song.album.release_year }}</h3>
+<h3>Duration: {{ song.duration }}</h3>
+<h3>Band: {{ song.album.band.name }}</h3>
+
+
+
+{% endblock %}
