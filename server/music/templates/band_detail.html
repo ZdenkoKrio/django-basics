@@ -9,4 +9,8 @@
 <h3>Year: {{ band.year }}</h3>
 <h3>Genre: {{ band.get_genre_display }}</h3>
 
+{% for a in albums %}
+    <h3><a href="{% url 'a_detail' a.id %}"> {{ a.title }}</a></h3>
+{% endfor %}
+
 {% endblock %}
