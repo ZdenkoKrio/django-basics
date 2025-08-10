@@ -17,10 +17,11 @@ def band_detail_view(request, id):
 def band_create_view(request):
     name = request.GET.get("name")
     year = request.GET.get("year")
+    genre = request.GET.get("genre")
 
     if ((name is not None and year is not None) and
             (name is not "" and year is not "")):
-        new_band = Band(name=name, year=year)
+        new_band = Band(name=name, year=year, genre=genre)
         new_band.save()
         return redirect("bands")
 
