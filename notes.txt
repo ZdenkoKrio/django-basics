@@ -1,26 +1,6 @@
-Exercise 4
-a. Create a model named Article that will store article data in the CMS. The model should have the following fields:
+Add another model: Song. It should have the following fields:
 
-title: string, max. 128 characters,
-author: string, max. 64 characters, can take null,
-content: string, unlimited length,
-date_added: datetime field, value to be automatically added when first saved (hint: auto_now_add=True).
-b. Article model needs a few more fields:
-
-status, which will take the following values:
-in writing,
-pending editor approval,
-published (hint: choices attribute),
-publish date (field can be null),
-removal date (field can be null).
-Define these properties, choosing field types accordingly.
-
-
-Exercise 5
-Create a model named Album that will store the following values:
-
-album title,
-release year,
-rating (on a scale of 0-5 stars) (hint: choices).
-Define these properties, choosing field types accordingly.
-
+title: string, max length of 128 characters,
+duration: time (TimeField), can take null,
+add a many-to-one relationship so that one album can have multiple songs.
+Complete the data by creating albums of bands and populating them with songs (the songs don't have to be real, just add any).
