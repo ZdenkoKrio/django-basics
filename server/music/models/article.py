@@ -1,4 +1,5 @@
 from django.db import models
+#from .category import Category
 
 
 class Article(models.Model):
@@ -15,3 +16,4 @@ class Article(models.Model):
     status = models.IntegerField(choices=STATUS)
     publish_date = models.DateField(null=True)
     removal_date = models.DateField(null=True)
+    categories = models.ManyToManyField("Category")

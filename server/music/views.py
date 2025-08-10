@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Band, Album, Song
+from .models import Band, Album, Song, Article
 
 
 def band_list_view(request):
@@ -44,3 +44,15 @@ def song_detail_view(request, id):
     result = Song.objects.get(id=id)
     return render(request, "song_detail.html",
                   {"song": result})
+
+
+def article_list_view(request):
+    result = Article.objects.all().values()
+    return render(request, "article_list.html", {"articles": result})
+
+
+def article_detail_view(request, id):
+    result: Article = Article.objects.get(id=id)
+    print(f"art: {result.categories}")
+    return render(request, "article_detail.html",
+                  {"article": result})

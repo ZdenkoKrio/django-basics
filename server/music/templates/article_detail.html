@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>Article {{ article.title }} page</h1>
+
+{{ article.content }}
+
+{% for c in article.categories.all %}
+    <h3><a href=""> {{ c.name }}</a></h3>
+{% endfor %}
+
+{% endblock %}
