@@ -7,6 +7,6 @@
 <h1>Band {{ band.name}} page</h1>
 
 <h3>Year: {{ band.year }}</h3>
-<h3>Genre: {{ band.genre }}</h3>
+<h3>Genre: {{ band.get_genre_display }}</h3>
 
 {% endblock %}

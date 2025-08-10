@@ -5,7 +5,7 @@
 
 {% block content %}
 <h1>Band list page</h1>
-
+<a href="{% url 'b_create' %}">Add new</a>
 <ul>
   {% for band in bands %}
   <li><a href="{% url 'b_detail' band.id %}">{{ band.name }}</a></li>

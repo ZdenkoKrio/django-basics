@@ -20,4 +20,4 @@ class Band(models.Model):
 
 
     def __str__(self):
-        return f"{self.name} - {self.GENRE[self.genre][1]}"
+        return f"{self.name} - {self.get_genre_display()}"
