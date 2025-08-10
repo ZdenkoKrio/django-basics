@@ -1,22 +1,26 @@
-Look in the exercises_app application in the coderslab project.
-There you will find a Band model that contains information about rock bands.
- You will find two fields defined there:
- name - band name, and year - year the band was formed.
+Exercise 4
+a. Create a model named Article that will store article data in the CMS. The model should have the following fields:
 
-Add the following fields there:
+title: string, max. 128 characters,
+author: string, max. 64 characters, can take null,
+content: string, unlimited length,
+date_added: datetime field, value to be automatically added when first saved (hint: auto_now_add=True).
+b. Article model needs a few more fields:
 
-still_active: whether the band is still active.
-The field should take a boolean type, default value True.
-genre: integer type field that should take values:
--1: not defined,
-0: rock,
-1: metal,
-2: pop,
-3: hip-hop,
-4: electronic,
-5: reggae,
-6: other.
-The field should take the value -1 by default.
+status, which will take the following values:
+in writing,
+pending editor approval,
+published (hint: choices attribute),
+publish date (field can be null),
+removal date (field can be null).
+Define these properties, choosing field types accordingly.
 
-Hint: Use the choices parameter. You can find more in the Snippets section.
+
+Exercise 5
+Create a model named Album that will store the following values:
+
+album title,
+release year,
+rating (on a scale of 0-5 stars) (hint: choices).
+Define these properties, choosing field types accordingly.
 
